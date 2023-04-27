@@ -6,13 +6,13 @@
 /*   By: makacem <makacem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:22:51 by makacem           #+#    #+#             */
-/*   Updated: 2023/04/27 19:34:06 by makacem          ###   ########.fr       */
+/*   Updated: 2023/04/27 19:36:18 by makacem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-void    printfinfo(ScavTrap &object)
+void    printfinfo(FragTrap &object)
 {
     std::cout << object.getName() << " hit points = " << object.getHitPoints() << std::endl;
     std::cout << object.getName() << " energy points = " << object.getEnergyPoints() << std::endl;
@@ -21,8 +21,8 @@ void    printfinfo(ScavTrap &object)
 
 int main()
 {
-    ScavTrap mehdi("Mehdi");
-    ScavTrap karim("Karim");
+    FragTrap mehdi("Mehdi");
+    FragTrap karim("Karim");
 
     printfinfo(mehdi);
     printfinfo(karim);
@@ -43,6 +43,6 @@ int main()
     mehdi.takeDamage(karim.getAttackDamage());
     printfinfo(mehdi);
     printfinfo(karim);
-    karim.guardGate();
-    
+    mehdi.highFiveGuys();
+    karim.highFiveGuys();
 } 
