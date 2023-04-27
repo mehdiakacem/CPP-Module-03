@@ -6,11 +6,11 @@
 /*   By: makacem <makacem@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 16:22:51 by makacem           #+#    #+#             */
-/*   Updated: 2023/04/27 16:41:28 by makacem          ###   ########.fr       */
+/*   Updated: 2023/04/27 19:16:38 by makacem          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 void    printfinfo(ClapTrap &object)
 {
@@ -21,9 +21,11 @@ void    printfinfo(ClapTrap &object)
 
 int main()
 {
-    ClapTrap mehdi("Mehdi");
-    ClapTrap karim("Karim");
-    
+    ScavTrap mehdi("Mehdi");
+    ScavTrap karim("Karim");
+
+    printfinfo(mehdi);
+    printfinfo(karim);
     mehdi.setAttackDamage(3);
     printfinfo(mehdi);
     printfinfo(karim);
@@ -41,4 +43,6 @@ int main()
     mehdi.takeDamage(karim.getAttackDamage());
     printfinfo(mehdi);
     printfinfo(karim);
+    karim.guardGate();
+    
 } 
